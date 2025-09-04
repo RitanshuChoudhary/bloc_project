@@ -18,7 +18,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<LoginRequested>((event, emit) {
       emit(AuthLoading());
       if (user != null &&
-          user!.userName == event.userName &&
+          user!.email == event.email &&
           user!.password == event.password) {
         emit(AuthAuthenticated(user: user!));
       } else {
