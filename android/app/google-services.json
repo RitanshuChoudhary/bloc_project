@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "851005797045",
+    "project_id": "task-flow-app-bloc",
+    "storage_bucket": "task-flow-app-bloc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851005797045:android:102dcb9cbc447f0ec404fc",
+        "android_client_info": {
+          "package_name": "com.example.bloctodolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA3hg8wvhKBWtqWNW5PLfyhxUi6XC2y50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

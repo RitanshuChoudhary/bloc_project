@@ -1,13 +1,16 @@
 import 'package:bloctodolist/core/widgets/features/auth/data/models/user_model.dart';
 import 'package:bloctodolist/core/widgets/features/auth/logic/bloc/auth_event.dart';
+import 'package:bloctodolist/core/widgets/features/auth/repository/auth_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   UserModel? user;
-  AuthBloc() : super(AuthInitial()) {
+  final AuthRepository authRepository;
+  AuthBloc({required this.authRepository}) : super(AuthInitial()) {
     on<AppStarts>((event, emit) {
+
       if (user != null) {
         emit(AuthAuthenticated(user: user!));
       } else {
