@@ -1,10 +1,9 @@
 import 'package:bloctodolist/core/widgets/features/auth/data/models/user_model.dart';
 import 'package:bloctodolist/core/widgets/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:bloctodolist/core/widgets/features/auth/presentation/pages/sign_up_page.dart';
+import 'package:bloctodolist/core/widgets/features/task/presentation/task_page.dart';
 import 'package:flutter/material.dart';
-
 import '../core/widgets/features/auth/presentation/pages/splash_page.dart';
-import '../core/widgets/features/home/presentation/home_page.dart';
 import 'app_routes.dart';
 
 class AppRouter {
@@ -19,9 +18,9 @@ class AppRouter {
       case AppRoutes.signup:
         return MaterialPageRoute(builder: (_) => SignUpPage());
 
-      case AppRoutes.home:
+      case AppRoutes.task:
         final user = settings.arguments as UserModel;
-        return MaterialPageRoute(builder: (_) => HomePage(user: user));
+        return MaterialPageRoute(builder: (_) => TaskPage(user: user));
 
       default:
         return MaterialPageRoute(

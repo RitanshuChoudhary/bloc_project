@@ -10,7 +10,9 @@
         "cupertino_icons",
         "equatable",
         "flutter",
-        "flutter_bloc"
+        "flutter_bloc",
+        "flutter_slidable",
+        "google_fonts"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -74,6 +76,16 @@
         "hive",
         "meta",
         "synchronized"
+      ]
+    },
+    {
+      "name": "google_fonts",
+      "version": "6.3.1",
+      "dependencies": [
+        "crypto",
+        "flutter",
+        "http",
+        "path_provider"
       ]
     },
     {
@@ -340,6 +352,23 @@
       ]
     },
     {
+      "name": "http",
+      "version": "1.5.0",
+      "dependencies": [
+        "async",
+        "http_parser",
+        "meta",
+        "web"
+      ]
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.6",
+      "dependencies": [
+        "typed_data"
+      ]
+    },
+    {
       "name": "provider",
       "version": "6.1.5+1",
       "dependencies": [
@@ -379,10 +408,25 @@
       ]
     },
     {
-      "name": "crypto",
-      "version": "3.0.6",
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "http_parser",
+      "version": "4.1.2",
       "dependencies": [
+        "collection",
+        "source_span",
+        "string_scanner",
         "typed_data"
+      ]
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
       ]
     },
     {
@@ -393,10 +437,10 @@
       ]
     },
     {
-      "name": "typed_data",
-      "version": "1.4.0",
+      "name": "flutter_slidable",
+      "version": "3.1.2",
       "dependencies": [
-        "collection"
+        "flutter"
       ]
     }
   ],

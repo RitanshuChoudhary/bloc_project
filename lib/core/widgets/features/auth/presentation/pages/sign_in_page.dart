@@ -18,7 +18,7 @@ class SignInPage extends StatelessWidget {
           if (state is AuthAuthenticated) {
             Navigator.pushReplacementNamed(
               context,
-              AppRoutes.home,
+              AppRoutes.task,
               arguments: state.user,
             );
           }
