@@ -59,12 +59,15 @@ dev_dependencies:
   flutter_lints: ^5.0.0
 
 flutter_native_splash:
-  color: "#FFFFFF"
+  color: "#87CEFA"   # background color matching your gradient/light blue
   image: assets/images/taskflow_splash.png
-  fullscreen: true
-  android_12:
-    image: assets/images/taskflow_splash.png
-    fullscreen: true
+  android: true
+  ios: true
+  web: false
+
+  android_gravity: fill   # 👈 makes image full height/width
+  ios_content_mode: scaleAspectFill
+
 
 
 # For information on the generic Dart part of this file, see the
