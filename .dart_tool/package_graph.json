@@ -10,6 +10,7 @@
         "cloud_firestore",
         "cupertino_icons",
         "equatable",
+        "firebase_app_check",
         "firebase_auth",
         "firebase_core",
         "firebase_storage",
@@ -81,6 +82,17 @@
         "hive",
         "meta",
         "synchronized"
+      ]
+    },
+    {
+      "name": "firebase_app_check",
+      "version": "0.4.0+1",
+      "dependencies": [
+        "firebase_app_check_platform_interface",
+        "firebase_app_check_web",
+        "firebase_core",
+        "firebase_core_platform_interface",
+        "flutter"
       ]
     },
     {
@@ -427,6 +439,41 @@
       ]
     },
     {
+      "name": "firebase_core_platform_interface",
+      "version": "6.0.0",
+      "dependencies": [
+        "collection",
+        "flutter",
+        "flutter_test",
+        "meta",
+        "plugin_platform_interface"
+      ]
+    },
+    {
+      "name": "firebase_app_check_web",
+      "version": "0.2.0+16",
+      "dependencies": [
+        "_flutterfire_internals",
+        "firebase_app_check_platform_interface",
+        "firebase_core",
+        "firebase_core_web",
+        "flutter",
+        "flutter_web_plugins",
+        "web"
+      ]
+    },
+    {
+      "name": "firebase_app_check_platform_interface",
+      "version": "0.2.0+1",
+      "dependencies": [
+        "_flutterfire_internals",
+        "firebase_core",
+        "flutter",
+        "meta",
+        "plugin_platform_interface"
+      ]
+    },
+    {
       "name": "firebase_storage_web",
       "version": "3.10.19",
       "dependencies": [
@@ -450,17 +497,6 @@
         "collection",
         "firebase_core",
         "flutter",
-        "meta",
-        "plugin_platform_interface"
-      ]
-    },
-    {
-      "name": "firebase_core_platform_interface",
-      "version": "6.0.0",
-      "dependencies": [
-        "collection",
-        "flutter",
-        "flutter_test",
         "meta",
         "plugin_platform_interface"
       ]

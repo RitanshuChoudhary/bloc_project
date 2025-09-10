@@ -43,6 +43,7 @@ dependencies:
   firebase_auth:
   cloud_firestore:
   firebase_storage:
+  firebase_app_check: ^0.4.0+1
 
 
 dev_dependencies:

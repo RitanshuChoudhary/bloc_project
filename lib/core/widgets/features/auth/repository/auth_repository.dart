@@ -22,29 +22,37 @@ class AuthRepository {
     required String username,
     File? profileImage,
   }) async {
-    final creds = await _firebaseAuth.createUserWithEmailAndPassword(
-      email: email,
-      password: password,
-    );
-    if (creds.user != null) {
-      String? imageUrl;
-      if (profileImage != null) {
-        final ref = _storage
-            .ref()
-            .child("profile_pics")
-            .child("${creds.user?.uid}");
+    try {
+      final creds = await _firebaseAuth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
 
-        ref.putFile(profileImage);
-        imageUrl = await ref.getDownloadURL();
+      if (creds.user != null) {
+        String? imageUrl;
+        if (profileImage != null) {
+          final ref = _storage
+              .ref()
+              .child("profile_pics")
+              .child("${creds.user!.uid}");
+
+          // Await the upload
+          await ref.putFile(profileImage);
+          imageUrl = await ref.getDownloadURL();
+        }
+
+        await _firestore.collection("users").doc(creds.user!.uid).set({
+          "email": email,
+          "userName": username,
+          "profilePic": imageUrl ?? "",
+          "createdAt": FieldValue.serverTimestamp(),
+        });
       }
-      await _firestore.collection("users").doc(creds.user!.uid).set({
-        "email": email,
-        "userName": username,
-        "profilePic": imageUrl ?? "",
-        "createdAt": FieldValue.serverTimestamp(),
-      });
+      return creds.user;
+    } catch (e) {
+      print('Sign up error: $e');
+      rethrow;
     }
-    return creds.user;
   }
 
   Future<User?> signIn({

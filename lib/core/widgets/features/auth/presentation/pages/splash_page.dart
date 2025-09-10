@@ -20,7 +20,7 @@ class SplashPage extends StatelessWidget {
         }
         if (state is AuthUnAuthenticated) {
           Navigator.of(context).pushReplacementNamed(
-            AppRoutes.task,
+            AppRoutes.signIn,
             arguments: UserModel(
               id: "id",
               userName: "userName",
